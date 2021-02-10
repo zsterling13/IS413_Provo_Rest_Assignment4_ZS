@@ -1,0 +1,22 @@
+﻿/*Styling to have input boxes line-up*/
+label {
+    width: 30%;
+    display: inline-block;
+    margin-bottom: 1%;
+    margin-left: 1%;
+}
+
+/*Spacing for submit button*/
+#submit_button {
+    margin-left: 20%;
+}
+
+/*Highlighting styling for table rows in user-submitted restaurants*/
+#highlight:hover {
+    background-color:lightblue;
+}
+
+/*Gets rid of bullet point styling on unordered list on index page*/
+ul {
+    list-style-type:none;
+}

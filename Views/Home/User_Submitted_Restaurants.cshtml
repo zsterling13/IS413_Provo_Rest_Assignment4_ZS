@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+    ViewBag.Title = "Submitted Restaurants";
+}
+
+@model IEnumerable<IS413_Provo_Rest_Assignment4_ZS.Models.User_Restaurants>;
+
+<div class="text-center">
+    <h1>Submitted Restaurants</h1>
+</div>
+<div class="text-center">
+    <table class="center table table-striped">
+        <thead>
+            <tr>
+                <th>User Name</th>
+                <th>Restaurant Name</th>
+                <th>Favorite Dish</th>
+                <th>Restaurant Phone Number</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!--Loops through all of the submitted restaurants to print them out here-->
+            @foreach (IS413_Provo_Rest_Assignment4_ZS.Models.User_Restaurants x in Model)
+            {
+                <tr id="highlight">
+                    <td>@x.User_Name</td>
+                    <td>@x.Restaurant_Name</td>
+                    <td>@x.Dish</td>
+                    <td>@x.Phone</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

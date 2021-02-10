@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model IEnumerable<string>
+
+<div class="text-center">
+    <h1 class="display-4 modal-title">Top 5 Restaurants in Provo, Utah</h1>
+    <br /><br />
+    <img src="~/img/Provo-Campus-Pic.jpg" class="img-thumbnail rounded-circle"/>
+    <br /><br />
+
+    <!--Iterate through preset restaurant list and display information for each restaurant as a list item-->
+    <ul>
+        @foreach (string r in Model)
+        {
+            <li>@r</li>
+
+        }
+    </ul>
+</div>

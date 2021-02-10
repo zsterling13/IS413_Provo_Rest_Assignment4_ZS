@@ -1,0 +1,36 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Submit a Restaurant";
+}
+
+@model IS413_Provo_Rest_Assignment4_ZS.Models.User_Restaurants;
+<div class="display-4 text-center">
+    <h1>Submit a Restaurant</h1>
+</div>
+<br />
+<div>
+    <!--Form for user to enter in information for a new restaurant entry-->
+    <form asp-action="User_Submit" method="post" class="form-group">
+        <label asp-for="User_Name" >Submitter's Name: </label>
+        <input asp-for="User_Name" placeholder="Bob007"/>
+        <br />
+
+        <label asp-for="Restaurant_Name">Restaurant's Name: </label>
+        <input asp-for="Restaurant_Name" placeholder="Local Joe's" />
+        <br />
+
+        <label asp-for="Dish">Favorite Dish: </label>
+        <input asp-for="Dish" placeholder="Ravioli"/>
+        <br />
+
+        <label asp-for="Phone">Restaurant's Phone Number: </label>
+        <input asp-for="Phone" placeholder="555-555-5555"/>
+        <br />
+
+        <button type="submit" id="submit_button" class="btn-secondary">Submit</button>
+        <br />
+        <div asp-validation-summary="All"></div>
+    </form>
+</div>
