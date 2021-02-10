@@ -16,7 +16,8 @@ namespace IS413_Provo_Rest_Assignment4_ZS.Models
 
         [Required]
         public string Dish { get; set; } = "It's all tasty!";
-        [Required, RegularExpression("[0-9][0-9][0-9]-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]")]
+
+        [Required, RegularExpression("[0-9][0-9][0-9]-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]", ErrorMessage = "Not a valid phone number")]
         public string Phone { get; set; }
 
     }
