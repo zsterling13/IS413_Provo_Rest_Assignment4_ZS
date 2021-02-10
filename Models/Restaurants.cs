@@ -21,17 +21,17 @@ namespace IS413_Provo_Rest_Assignment4_ZS.Models
         public string Name { get; set; }
 
         #nullable enable
-        public string? Dish { get; set; } = "It's all tasty";
+            public string? Dish { get; set; } = "It's all tasty";
         #nullable disable
 
         [Required]
         public string Address { get; set; }
 
         #nullable enable
-        [RegularExpression("[0-9][0-9][0-9]-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]")]
-        public string? Phone { get; set; }
+            [RegularExpression("[0-9][0-9][0-9]-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]")]
+            public string? Phone { get; set; } = "";
        
-        public string? Website_Link { get; set; } = "Coming Soon!!!";
+            public string? Website_Link { get; set; } = "Coming Soon";
         #nullable disable
 
 
@@ -41,46 +41,46 @@ namespace IS413_Provo_Rest_Assignment4_ZS.Models
             Restaurants r1 = new Restaurants(1)
             {
                 Name = "Taco Bell",
-                Address = "Provo, Utah",
-                Dish = "Taco",
-                Phone = "801-422-8722",
+                Address = "1244 N Freedom Blvd, Provo, UT 84604",
+                Dish = "Taco Supreme",
+                Phone = "801-377-7080",
                 Website_Link = null
             };
 
             Restaurants r2 = new Restaurants(2)
             {
                 Name = "J Dawgs",
-                Address = "Provo, Utah",
+                Address = "858 700 E, Provo, UT 84606",
                 Dish = null,
-                Phone = "801-422-5563",
-                Website_Link = "www.jdawgs.com"
+                Phone = "801-373-3294",
+                Website_Link = "https://jdawgs.com"
             };
 
             Restaurants r3 = new Restaurants(3)
             {
                 Name = "Olive Garden",
-                Address = "Provo, Utah",
-                Dish = "Pasta",
-                Phone = "801-886-3427",
-                Website_Link = "www.olivegarden.com"
+                Address = "504 W 2230 N, Provo, UT 84604",
+                Dish = "Spaghetti and Meat Sauce",
+                Phone = "801-337-0062",
+                Website_Link = "https://www.olivegarden.com"
             };
 
             Restaurants r4 = new Restaurants(4)
             {
                 Name = "Noodles and Co.",
-                Address = "Provo, Utah",
-                Dish = "Mac N' Cheese",
-                Phone = "435-224-3021",
-                Website_Link = "www.noodlesandco.com"
+                Address = "62 West Bulldog Blvd, Provo, UT 84604",
+                Dish = "Winsconsin Mac N' Cheese",
+                Phone = "435-373-9670",
+                Website_Link = "https://www.noodles.com"
             };
 
             Restaurants r5 = new Restaurants(5)
             {
                 Name = "Panda Express",
-                Address = "Provo, Utah",
-                Dish = "Orange Chicken",
-                Phone = "801-198-0032",
-                Website_Link = "www.pandaexpress.com"
+                Address = "1240 N University Ave, Provo, UT 84604",
+                Dish = "Orange Chicken Bowl",
+                Phone = "801-818-0111",
+                Website_Link = "https://www.pandaexpress.com"
             };
 
             return new Restaurants[] { r1, r2, r3, r4, r5 };

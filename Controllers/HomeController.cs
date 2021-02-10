@@ -26,7 +26,8 @@ namespace IS413_Provo_Rest_Assignment4_ZS.Controllers
 
             foreach(Restaurants r in Restaurants.GetRestaurants())
             {
-                restaurantList.Add($"#{r.Rank}: {r.Name}  --- Favorite Dish: {r.Dish ?? "It's all tasty!"}  ---  Address: {r.Address}  ---  Phone: {r.Phone}  ---  Website: {r.Website_Link ?? "Coming Soon"}");
+                restaurantList.Add($"#{r.Rank}: {r.Name}  --- Favorite Dish: {r.Dish ?? "It's all tasty!"}  ---  Address: {r.Address}  " +
+                    $"---  Phone: {r.Phone ?? ""}  ---  Website: <a href='{r.Website_Link ?? "#"}'> {r.Website_Link ?? "Coming Soon"} </a>");
             }
 
             return View(restaurantList);
@@ -55,7 +56,7 @@ namespace IS413_Provo_Rest_Assignment4_ZS.Controllers
             if (ModelState.IsValid == true)
             {
                 Restaurant_List.AddRestaurant(submission);
-                return View("Confirmation", submission);
+                return View("Confirmation");
             }
             else
                 return View();

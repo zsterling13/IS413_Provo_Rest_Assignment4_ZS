@@ -14,8 +14,7 @@
     <ul>
         @foreach (string r in Model)
         {
-            <li>@r</li>
-
+            <li>@Html.Raw(r)</li>
         }
     </ul>
 </div>
